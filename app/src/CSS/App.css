@@ -1,0 +1,148 @@
+body {
+  background: radial-gradient(#156f99, #0a2e50);
+  background-attachment: fixed;
+  font-family: "Acme", sans-serif;
+}
+
+.title {
+  font-family: "Acme", sans-serif;
+  font-size: 4rem;
+  color: #ff524a;
+  -webkit-text-stroke: 1px black;
+}
+
+.App {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.link-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 50%;
+}
+
+img {
+  height: 170px;
+  width: 170px;
+}
+.card-container {
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+}
+.poke-card {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  border-radius: 15px;
+}
+
+/* FLIP CARD STYLE */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.button {
+  background: transparent !important;
+  color: #bbb !important;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 2px 4px 10px black;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #bbb;
+  color: black;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.description {
+  width: 500px !important;
+}
+
+.type-container {
+  display: flex;
+  /* justify-content: space-evenly; */
+}
+
+.type-results {
+  display: flex;
+
+  padding-left: 1rem;
+}
+
+.move-container {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.move-results {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.move-items {
+  padding: 2rem;
+}
+
+.modal {
+  display: flex !important;
+}
